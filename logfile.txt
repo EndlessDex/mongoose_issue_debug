@@ -1,0 +1,1451 @@
+make all
+rm -rf build
+rm -rf dist/*
+cmake src -B build -DCMAKE_BUILD_TYPE=Release
+-- The C compiler identification is GNU 11.4.0
+-- The CXX compiler identification is GNU 11.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.7s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/apoindexter/git/mongoose_issue_debug/build
+cmake --build build --parallel
+gmake[1]: Entering directory '/home/apoindexter/git/mongoose_issue_debug/build'
+gmake[2]: Entering directory '/home/apoindexter/git/mongoose_issue_debug/build'
+gmake[3]: Entering directory '/home/apoindexter/git/mongoose_issue_debug/build'
+gmake[3]: Entering directory '/home/apoindexter/git/mongoose_issue_debug/build'
+gmake[3]: Leaving directory '/home/apoindexter/git/mongoose_issue_debug/build'
+gmake[3]: Leaving directory '/home/apoindexter/git/mongoose_issue_debug/build'
+gmake[3]: Entering directory '/home/apoindexter/git/mongoose_issue_debug/build'
+gmake[3]: Entering directory '/home/apoindexter/git/mongoose_issue_debug/build'
+[ 66%] Building CXX object mongoose/CMakeFiles/mongoose.dir/mongoose_main.cpp.o
+[ 66%] Building C object mongoose/CMakeFiles/mongoose.dir/mongoose/mongoose.c.o
+gmake[3]: Leaving directory '/home/apoindexter/git/mongoose_issue_debug/build'
+[ 66%] Built target copy_static_files
+[100%] Linking CXX executable mongoose
+gmake[3]: Leaving directory '/home/apoindexter/git/mongoose_issue_debug/build'
+[100%] Built target mongoose
+gmake[2]: Leaving directory '/home/apoindexter/git/mongoose_issue_debug/build'
+gmake[1]: Leaving directory '/home/apoindexter/git/mongoose_issue_debug/build'
+cmake --install build
+-- Install configuration: "Release"
+-- Installing: /home/apoindexter/git/mongoose_issue_debug/src/../dist/bin/mongoose
+sudo /home/apoindexter/git/mongoose_issue_debug/dist/bin/mongoose -d /home/apoindexter/git/mongoose_issue_debug/dist/bin/httpd
+1c70054b 3 net.c:195:mg_listen          1 4 http://0.0.0.0:80
+1c70054b 2 mongoose_main.cpp:91:main    Starting Mongoose v7.12, serving [/home/apoindexter/git/mongoose_issue_debug/dist/bin/httpd]
+1c700c61 3 sock.c:417:accept_conn       2 5 accepted 172.24.82.3:58953 -> 0.0.0.0:80
+1c700c68 3 sock.c:274:read_conn         2 5 snd 0/0 rcv 0/2048 n=491 err=0
+1c700c69 3 sock.c:285:write_conn        2 5 snd 116/2048 rcv 0/2048 n=116 err=0
+1c700c6b 3 sock.c:417:accept_conn       3 6 accepted 172.24.82.3:58954 -> 0.0.0.0:80
+1c700c9c 3 sock.c:417:accept_conn       4 7 accepted 172.24.82.3:58955 -> 0.0.0.0:80
+1c700c9c 3 sock.c:274:read_conn         4 7 snd 0/0 rcv 0/2048 n=510 err=0
+1c700c9c 2 mongoose_main.cpp:107:WebSoc WebSocketConnect: 172.24.82.3:58955
+1c700c9c 3 sock.c:285:write_conn        4 7 snd 129/2048 rcv 0/2048 n=129 err=0
+1c700e91 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c700e91 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c700e91 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c701085 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c701086 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c701086 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70127a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70127a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70127a 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70146f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70146f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70146f 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c701664 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c701664 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c701664 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c701859 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c701859 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c701859 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c701a4e 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c701a4e 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c701a4e 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c701c43 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c701c43 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c701c43 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c701e37 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c701e38 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c701e38 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70202c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70202c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70202c 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c702221 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c702221 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c702221 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c702416 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c702416 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c702416 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70260b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70260b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70260b 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c702800 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c702800 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c702800 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c7029f5 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7029f5 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7029f5 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c702bf6 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c702bf6 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c702bf6 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c702deb 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c702deb 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c702deb 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c702fe0 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c702fe0 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c702fe0 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c7031d5 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7031d5 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7031d5 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c7033ca 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7033ca 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7033ca 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c7035be 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7035be 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7035be 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c7037b3 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7037b3 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7037b3 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c7039a8 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7039a8 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7039a8 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c703b9d 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c703b9d 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c703b9d 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c703d91 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c703d92 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c703d92 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c703f86 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c703f86 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c703f87 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70417b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70417b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70417b 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c704370 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c704370 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c704370 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c704565 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c704565 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c704565 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70475a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70475a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70475a 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70494f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70494f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70494f 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c704b44 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c704b44 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c704b44 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c704d39 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c704d39 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c704d39 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c704f2d 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c704f2d 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c704f2e 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c705122 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c705122 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c705122 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c705317 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c705317 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c705317 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70550c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70550c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70550c 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c705701 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c705701 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c705701 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c7058f5 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7058f5 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7058f6 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c705aea 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c705aea 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c705aea 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c705cdf 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c705cdf 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c705cdf 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c705ed4 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c705ed4 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c705ed4 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c7060c8 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7060c9 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7060c9 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c7062bd 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7062bd 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7062bd 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c7064b3 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7064b3 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7064b3 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c7066a8 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7066a8 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7066a8 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70689c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70689c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70689c 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c706a91 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c706a91 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c706a91 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c706c86 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c706c86 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c706c86 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c706e7b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c706e7b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c706e7b 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c707070 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c707070 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c707070 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c707265 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c707265 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c707265 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70745a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70745a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70745a 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70764f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70764f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70764f 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c707844 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c707844 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c707844 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c707a39 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c707a39 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c707a39 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c707c2d 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c707c2d 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c707c2e 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c707e23 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c707e23 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c707e23 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c708018 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c708018 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c708018 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70820c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70820c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70820c 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c708401 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c708401 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c708401 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c7085f5 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7085f6 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7085f6 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c7087ea 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7087ea 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7087ea 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c7089df 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7089df 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7089df 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c708bd4 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c708bd4 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c708bd4 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c708dc9 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c708dc9 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c708dc9 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c708fbd 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c708fbd 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c708fbd 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c7091b2 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7091b2 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7091b2 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c7093a7 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7093a7 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7093a7 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70959c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70959c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70959c 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c709791 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c709791 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c709791 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c709985 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c709985 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c709986 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c709b7e 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c709b7f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c709b7f 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c709d73 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c709d74 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c709d74 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c709f68 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c709f68 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c709f68 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70a15d 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70a15d 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70a15d 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70a352 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70a352 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70a352 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70a547 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70a547 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70a547 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70a73c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70a73c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70a73c 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70a931 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70a931 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70a931 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70ab25 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70ab25 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70ab25 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70ad1a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70ad1a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70ad1a 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70af0f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70af0f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70af0f 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70b104 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70b104 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70b104 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70b2f9 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70b2f9 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70b2f9 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70b4ee 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70b4ee 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70b4ee 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70b6e3 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70b6e3 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70b6e3 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70b8d8 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70b8d8 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70b8d8 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70bacd 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70bacd 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70bacd 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70bcc2 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70bcc2 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70bcc2 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70beb6 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70beb6 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70beb7 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70c0ab 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70c0ab 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70c0ab 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70c2a0 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70c2a0 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70c2a0 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70c495 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70c495 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70c495 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70c68a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70c68a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70c68a 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70c87f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70c87f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70c87f 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70ca74 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70ca74 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70ca74 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70cc69 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70cc69 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6676/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70cc69 3 sock.c:285:write_conn        4 7 snd 6676/8192 rcv 0/2048 n=6676 err=0
+1c70ce5d 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70ce5d 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70ce5d 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70d052 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70d052 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70d052 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70d247 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70d247 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70d247 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70d43c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70d43c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70d43c 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70d631 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70d631 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70d631 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70d826 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70d826 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70d826 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70da1b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70da1b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70da1b 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70dc10 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70dc10 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70dc10 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70de05 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70de05 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70de05 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70dffa 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70dffa 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70dffa 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70e1ef 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70e1ef 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70e1ef 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70e3e4 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70e3e4 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70e3e4 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70e5d8 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70e5d8 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70e5d8 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70e7cd 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70e7cd 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70e7cd 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70e9c2 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70e9c2 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70e9c2 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70ebb7 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70ebb7 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70ebb7 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70edac 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70edac 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70edac 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70efa1 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70efa1 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70efa1 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70f195 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70f196 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70f196 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70f38a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70f38a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70f38b 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70f57f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70f57f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70f57f 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70f774 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70f774 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70f774 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70f969 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70f969 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70f969 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70fb5e 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70fb5e 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70fb5e 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70fd52 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70fd53 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70fd53 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c70ff47 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c70ff47 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c70ff47 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71013c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71013c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71013c 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c710331 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c710331 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c710331 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c710526 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c710526 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c710526 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71071b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71071b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71071b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71071b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b9940/13360/14336/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71071b 3 sock.c:285:write_conn        4 7 snd 13360/14336 rcv 0/2048 n=13360 err=0
+1c710910 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c710910 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c710910 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c710b05 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c710b05 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c710b05 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c710cf9 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c710cf9 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c710cfa 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c710eee 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c710eee 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c710eee 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7110e3 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7110e3 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7110e3 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7112d8 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7112d8 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7112d8 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7114cd 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7114cd 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7114cd 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7116c2 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7116c2 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7116c2 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7118b7 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7118b7 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7118b7 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c711aac 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c711aac 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c711aac 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c711ca1 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c711ca1 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c711ca1 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c711e96 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c711e96 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c711e96 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71208c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71208c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71208c 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c712281 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c712281 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c712281 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c712475 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c712475 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c712475 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71266a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71266a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71266a 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71285f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71285f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71285f 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c712a54 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c712a54 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c712a54 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c712c49 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c712c49 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c712c49 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c712e3e 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c712e3e 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c712e3e 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c713033 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c713033 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c713033 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c713228 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c713228 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c713228 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71341d 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71341d 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71341d 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c713612 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c713612 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c713612 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c713807 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c713807 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c713807 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7139fc 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7139fc 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7139fc 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c713bf1 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c713bf1 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c713bf1 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c713de6 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c713de6 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c713de6 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c713fda 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c713fda 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c713fdb 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7141cf 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7141cf 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7141cf 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7143c4 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7143c4 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7143c5 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7145b9 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7145b9 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7145b9 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7147ae 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7147ae 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7147ae 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7149a3 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7149a3 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7149a3 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c714b98 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c714b98 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c714b98 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c714d8d 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c714d8d 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c714d8d 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c714f82 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c714f82 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c714f82 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c715177 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c715177 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c715177 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71536c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71536c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71536c 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c715561 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c715561 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c715561 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c715755 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c715755 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c715756 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71594a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71594a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71594b 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c715b3f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c715b3f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c715b3f 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c715d34 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c715d34 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c715d34 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c715f29 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c715f29 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c715f29 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71611e 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71611e 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71611e 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c716313 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c716313 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c716313 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c716508 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c716508 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c716508 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7166fd 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7166fd 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7166fd 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7168f1 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7168f1 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7168f2 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c716ae6 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c716ae6 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c716ae6 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c716cdb 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c716cdb 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c716cdb 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c716ed0 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c716ed0 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c716ed1 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7170c5 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7170c5 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7170c5 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7172ba 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7172ba 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7172ba 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7174af 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7174af 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7174af 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7176a4 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7176a4 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7176a4 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c717899 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c717899 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c717899 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c717a8e 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c717a8e 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c717a8e 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c717c83 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c717c83 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c717c83 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c717e77 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c717e77 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c717e77 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71806c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71806c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71806c 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c718261 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c718261 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c718261 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c718456 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c718456 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c718456 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71864b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71864b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71864b 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c718840 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c718840 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c718840 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c718a35 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c718a35 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c718a35 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c718c2a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c718c2a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c718c2a 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c718e1f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c718e1f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c718e1f 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c719014 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c719014 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c719014 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c719209 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c719209 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c719209 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7193fe 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7193fe 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7193fe 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7195f3 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7195f3 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7195f3 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7197e7 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7197e8 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7197e8 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7199dc 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7199dd 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7199dd 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c719bd1 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c719bd1 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c719bd1 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c719dc6 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c719dc6 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c719dc7 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c719fbb 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c719fbb 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c719fbb 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71a1b0 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71a1b0 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71a1b0 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71a3a5 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71a3a5 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71a3a5 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71a59a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71a59a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71a59a 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71a78f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71a78f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71a78f 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71a984 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71a984 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71a984 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71ab78 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71ab78 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71ab79 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71ad6d 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71ad6d 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71ad6e 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71af62 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71af62 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71af62 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71b157 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71b157 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71b157 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71b34c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71b34c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71b34c 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71b541 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71b541 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71b541 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71b736 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71b736 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71b736 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71b92b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71b92b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71b92b 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71bb20 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71bb20 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71bb20 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71bd15 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71bd15 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71bd15 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71bf0a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71bf0a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71bf0a 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71c0ff 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71c0ff 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71c0ff 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71c2f3 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71c2f4 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71c2f4 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71c4e8 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71c4e8 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71c4e9 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71c6dd 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71c6dd 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71c6dd 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71c8d2 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71c8d2 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71c8d2 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71cac7 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71cac7 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71cac7 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71ccbc 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71ccbc 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71ccbc 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71ceb1 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71ceb1 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71ceb1 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71d0a6 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71d0a6 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71d0a6 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71d29b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71d29b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71d29b 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71d490 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71d490 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71d490 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71d684 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71d684 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71d684 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71d879 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71d879 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71d879 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71da6e 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71da6e 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71da6e 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71dc63 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71dc63 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71dc63 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71de58 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71de58 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71de58 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71e04d 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71e04d 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71e04d 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71e242 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71e242 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71e242 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71e437 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71e437 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71e437 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71e62c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71e62c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71e62c 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71e821 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71e821 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71e821 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71ea15 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71ea15 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71ea16 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71ec0a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71ec0a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71ec0b 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71edff 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71edff 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71edff 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71eff4 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71eff4 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71eff4 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71f1e9 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71f1e9 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71f1e9 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71f3de 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71f3de 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71f3de 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71f5d2 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71f5d3 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71f5d3 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71f7c7 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71f7c8 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71f7c8 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71f9bc 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71f9bc 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71f9bd 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71fbb1 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71fbb1 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71fbb1 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71fda6 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71fda6 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71fda6 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c71ff9b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c71ff9b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c71ff9b 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c720190 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c720190 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c720190 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c720385 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c720385 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c720385 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c72057a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72057a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72057a 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c72076f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72076f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72076f 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c720963 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c720963 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c720b58 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c720b58 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b9940/13360/14336/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c720d4d 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c720d4d 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53bd150/20040/20480/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c720f42 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c720f42 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53c2160/26720/28672/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c721137 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c721137 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/33400/34816/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72132c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72132c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53c0140/40080/40960/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c721521 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c721521 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53ca150/46760/47104/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c721716 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c721716 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/53440/55296/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72190a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72190a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53c5140/60120/61440/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c721aff 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c721aff 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53d4150/66800/67584/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c721cf4 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c721cf4 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/73480/73728/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c721ee9 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c721ee9 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53c9940/80160/81920/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7220de 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7220de 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53dd950/86840/88064/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7222d3 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7222d3 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/93520/94208/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7224c8 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7224c8 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53ce940/100200/100352/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7226bd 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7226bd 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53e7150/106880/108544/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7228b2 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7228b2 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/113560/114688/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c722aa7 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c722aa7 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53d3940/120240/120832/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c722c9c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c722c9c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53f1150/126920/126976/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c722e91 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c722e91 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/133600/135168/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c723086 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c723086 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad6c010/140280/141312/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72327b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72327c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad47010/146960/147456/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c723471 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c723471 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad20010/153640/155648/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c723666 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c723666 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad67010/160320/161792/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72385b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72385b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad3d010/167000/167936/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c723a50 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c723a50 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad12010/173680/174080/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c723c46 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c723c46 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad62010/180360/182272/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c723e3b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c723e3b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad33010/187040/188416/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c724030 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c724031 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad03010/193720/194560/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c724226 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c724226 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad5d010/200400/200704/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72441b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72441b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad29010/207080/208896/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c724610 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c724610 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acf4010/213760/215040/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c724805 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c724805 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad58010/220440/221184/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7249fa 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7249fa 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad20010/227120/227328/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c724bf0 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c724bf0 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ace6010/233800/235520/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c724de5 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c724de5 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad53010/240480/241664/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c724fdb 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c724fdb 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad16010/247160/247808/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7251d0 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7251d1 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acd7010/253840/253952/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7253c6 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7253c6 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad4e010/260520/262144/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7255bb 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7255bb 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad0c010/267200/268288/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7257b0 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7257b0 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acc8010/273880/274432/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7259a6 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7259a6 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad4a010/280560/280576/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c725b9b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c725b9b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad03010/287240/288768/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c725d91 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c725d91 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acba010/293920/294912/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c725f86 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c725f86 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad45010/300600/301056/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72617c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72617c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acf9010/307280/309248/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c726371 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c726371 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acab010/313960/315392/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c726567 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c726567 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad40010/320640/321536/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72675c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72675c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acef010/327320/327680/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c726952 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c726952 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac9c010/334000/335872/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c726b48 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c726b48 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad3b010/340680/342016/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c726d3d 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c726d3d 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ace5010/347360/348160/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c726f33 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c726f33 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac8e010/354040/354304/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c727129 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c727129 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad36010/360720/362496/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72731e 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72731e 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acdb010/367400/368640/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c727514 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c727515 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac7f010/374080/374784/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72770b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72770b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad31010/380760/380928/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c727900 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c727900 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acd1010/387440/389120/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c727af6 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c727af6 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac70010/394120/395264/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c727cec 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c727cec 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad2c010/400800/401408/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c727ee1 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c727ee1 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acc8010/407480/407552/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7280d7 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7280d7 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac62010/414160/415744/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7282cd 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7282cd 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad27010/420840/421888/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7284c3 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7284c3 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acbe010/427520/428032/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7286b9 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7286b9 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac53010/434200/436224/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7288af 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7288af 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad22010/440880/442368/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c728aa5 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c728aa5 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acb4010/447560/448512/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c728c9a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c728c9a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac44010/454240/454656/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c728e91 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c728e91 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad1d010/460920/462848/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c729087 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c729087 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acaa010/467600/468992/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72927d 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72927d 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac35010/474280/475136/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c729474 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c729474 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad19010/480960/481280/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c729669 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c729669 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aca1010/487640/489472/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c729860 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c729860 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac27010/494320/495616/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c729a56 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c729a56 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad14010/501000/501760/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c729c4c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c729c4c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac97010/507680/507904/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c729e42 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c729e42 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac18010/514360/516096/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72a037 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72a037 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad0f010/521040/522240/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72a22e 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72a22e 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac8d010/527720/528384/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72a424 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72a425 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac0a010/534400/534528/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72a61a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72a61a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad0a010/541080/542720/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72a812 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72a812 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac83010/547760/548864/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72aa08 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72aa08 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abfb010/554440/555008/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72abfd 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72abfd 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad05010/561120/561152/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72adf3 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72adf3 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac79010/567800/569344/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72afe9 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72afe9 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abec010/574480/575488/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72b1e0 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72b1e0 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ad00010/581160/581632/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72b3d6 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72b3d6 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac6f010/587840/589824/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72b5cc 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72b5cc 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abdd010/594520/595968/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72b7c3 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72b7c3 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acfb010/601200/602112/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72b9b8 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72b9b8 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac66010/607880/608256/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72bbaf 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72bbaf 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abcf010/614560/616448/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72bda5 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72bda5 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acf6010/621240/622592/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72bf9b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72bf9b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac5c010/627920/628736/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72c191 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72c192 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abc0010/634600/634880/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72c388 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72c388 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acf1010/641280/643072/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72c57f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72c57f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac52010/647960/649216/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72c775 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72c775 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abb1010/654640/655360/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72c96c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72c96c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aced010/661320/661504/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72cb63 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72cb63 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac49010/668000/669696/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72cd59 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72cd59 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aba3010/674680/675840/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72cf50 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72cf50 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ace8010/681360/681984/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72d145 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72d145 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac3f010/688040/688128/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72d33b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72d33b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab94010/694720/696320/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72d532 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72d532 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ace3010/701400/702464/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72d728 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72d728 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac35010/708080/708608/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72d91f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72d91f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab85010/714760/716800/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72db16 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72db16 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acde010/721440/722944/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72dd0d 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72dd0d 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac2b010/728120/729088/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72df04 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72df04 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab77010/734800/735232/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72e0fb 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72e0fb 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acd9010/741480/743424/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72e2f2 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72e2f2 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac21010/748160/749568/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72e4e8 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72e4e8 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab68010/754840/755712/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72e6df 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72e6e0 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acd4010/761520/761856/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72e8d7 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72e8d7 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac17010/768200/770048/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72eacd 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72eacd 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab59010/774880/776192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72ecc5 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72ecc5 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5accf010/781560/782336/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72eebc 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72eebc 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac0e010/788240/788480/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72f0b2 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72f0b2 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab4b010/794920/796672/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72f2a9 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72f2a9 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acca010/801600/802816/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72f49f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72f49f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac04010/808280/808960/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72f696 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72f697 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab3c010/814960/815104/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72f88e 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72f88f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acc5010/821640/823296/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72fa86 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72fa86 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abfa010/828320/829440/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72fc7e 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72fc7e 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab2d010/835000/835584/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c72fe74 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c72fe74 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acc1010/841680/841728/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73006c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73006c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abf1010/848360/849920/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c730262 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c730262 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab1f010/855040/856064/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c730459 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c730459 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acbc010/861720/862208/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c730650 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c730650 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abe7010/868400/870400/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c730846 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c730846 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab10010/875080/876544/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c730a3e 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c730a3e 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acb7010/881760/882688/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c730c34 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c730c35 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abdd010/888440/888832/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c730e2b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c730e2b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab01010/895120/897024/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c731023 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c731023 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acb2010/901800/903168/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c731219 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c731219 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abd3010/908480/909312/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c731410 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c731410 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aaf3010/915160/915456/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c731607 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c731607 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5acad010/921840/923648/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7317fd 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7317fd 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abc9010/928520/929792/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7319f4 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7319f4 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aae4010/935200/935936/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c731beb 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c731beb 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aca8010/941880/942080/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c731de2 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c731de2 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abbf010/948560/950272/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c731fd9 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c731fd9 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aad5010/955240/956416/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7321cf 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7321cf 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aca3010/961920/962560/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7323c6 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7323c6 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abb6010/968600/968704/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7325bc 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7325bc 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aac7010/975280/976896/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7327b4 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7327b4 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac9e010/981960/983040/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7329aa 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7329aa 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abac010/988640/989184/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c732ba3 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c732ba3 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aab8010/995320/995328/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c732d9b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c732d9b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac99010/1002000/1003520/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c732f91 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c732f91 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aba2010/1008680/1009664/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c733189 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c733189 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aaa9010/1015360/1015808/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c733380 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c733380 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac94010/1022040/1024000/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c733578 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c733578 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab98010/1028720/1030144/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73376f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73376f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa9a010/1035400/1036288/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c733967 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c733967 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac90010/1042080/1042432/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c733b5d 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c733b5d 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab8f010/1048760/1050624/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c733d54 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c733d54 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa8c010/1055440/1056768/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c733f4c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c733f4c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac8b010/1062120/1062912/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c734142 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c734142 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab85010/1068800/1069056/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73433a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73433a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa7d010/1075480/1077248/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c734530 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c734531 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac86010/1082160/1083392/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c734727 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c734727 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab7b010/1088840/1089536/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73491f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73491f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa6f010/1095520/1095680/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c734b15 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c734b15 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac81010/1102200/1103872/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c734d0d 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c734d0d 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab71010/1108880/1110016/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c734f04 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c734f04 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa60010/1115560/1116160/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7350fa 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7350fa 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac7c010/1122240/1122304/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7352f3 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7352f3 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab67010/1128920/1130496/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7354e9 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7354e9 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa51010/1135600/1136640/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7356e1 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7356e1 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac77010/1142280/1142784/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7358d8 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7358d8 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab5d010/1148960/1150976/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c735acf 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c735acf 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa42010/1155640/1157120/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c735cc7 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c735cc7 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac72010/1162320/1163264/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c735ebd 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c735ebd 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab54010/1169000/1169408/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7360b6 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7360b6 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa34010/1175680/1177600/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7362ae 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7362ae 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac6d010/1182360/1183744/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7364a5 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7364a5 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab4a010/1189040/1189888/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73669d 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73669d 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa25010/1195720/1196032/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c736894 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c736894 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac68010/1202400/1204224/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c736a8c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c736a8c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab40010/1209080/1210368/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c736c83 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c736c83 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa16010/1215760/1216512/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c736e7b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c736e7b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac64010/1222440/1222656/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c737073 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c737073 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab37010/1229120/1230848/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73726a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73726a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa08010/1235800/1236992/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c737462 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c737462 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac5f010/1242480/1243136/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c737659 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c737659 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab2d010/1249160/1249280/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c737851 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c737851 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a9f9010/1255840/1257472/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c737a4a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c737a4a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac5a010/1262520/1263616/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c737c41 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c737c41 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab23010/1269200/1269760/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c737e39 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c737e39 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a9eb010/1275880/1275904/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c738032 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c738032 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac55010/1282560/1284096/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c738229 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c738229 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab19010/1289240/1290240/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c738421 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c738421 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a9dc010/1295920/1296384/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c738618 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c738618 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac50010/1302600/1304576/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73880f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73880f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab0f010/1309280/1310720/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c738a07 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c738a07 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a9cd010/1315960/1316864/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c738bfe 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c738bfe 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac4b010/1322640/1323008/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c738df7 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c738df7 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ab05010/1329320/1331200/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c738fef 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c738fef 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a9be010/1336000/1337344/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7391e7 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7391e7 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac46010/1342680/1343488/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7393e0 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7393e0 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aafc010/1349360/1349632/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7395d9 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7395d9 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a9b0010/1356040/1357824/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7397d0 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7397d0 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac41010/1362720/1363968/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7399c7 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7399c7 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aaf2010/1369400/1370112/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c739bc0 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c739bc0 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a9a1010/1376080/1376256/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c739db7 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c739db7 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac3c010/1382760/1384448/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c739faf 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c739faf 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aae8010/1389440/1390592/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73a1a8 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73a1a8 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a992010/1396120/1396736/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73a39f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73a39f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac38010/1402800/1402880/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73a599 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73a599 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aadf010/1409480/1411072/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73a790 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73a790 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a984010/1416160/1417216/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73a988 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73a989 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac33010/1422840/1423360/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73ab82 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73ab82 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aad5010/1429520/1431552/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73ad78 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73ad78 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a975010/1436200/1437696/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73af72 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73af72 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac2e010/1442880/1443840/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73b169 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73b169 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aacb010/1449560/1449984/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73b360 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73b360 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a966010/1456240/1458176/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73b558 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73b558 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac29010/1462920/1464320/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73b74f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73b74f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aac1010/1469600/1470464/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73b948 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73b948 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a958010/1476280/1476608/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73bb41 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73bb41 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac24010/1482960/1484800/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73bd38 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73bd38 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aab7010/1489640/1490944/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73bf31 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73bf31 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a949010/1496320/1497088/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73c129 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73c129 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac1f010/1503000/1503232/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73c320 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73c321 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aaad010/1509680/1511424/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73c51a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73c51a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a93a010/1516360/1517568/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73c711 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73c711 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac1a010/1523040/1523712/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73c90b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73c90b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aaa4010/1529720/1529856/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73cb04 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73cb04 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a92c010/1536400/1538048/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73ccfb 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73ccfb 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac15010/1543080/1544192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73cef5 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73cef5 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa9a010/1549760/1550336/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73d0ec 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73d0ec 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a91d010/1556440/1556480/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73d2e3 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73d2e4 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac10010/1563120/1564672/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73d4dd 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73d4dd 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa90010/1569800/1570816/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73d6d4 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73d6d4 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a90e010/1576480/1576960/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73d8cd 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73d8cd 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac0b010/1583160/1585152/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73dac6 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73dac6 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa86010/1589840/1591296/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73dcbf 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73dcbf 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a8ff010/1596520/1597440/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73deba 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73deba 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac07010/1603200/1603584/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73e0b1 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73e0b1 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa7d010/1609880/1611776/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73e2aa 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73e2aa 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a8f1010/1616560/1617920/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73e4a4 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73e4a4 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5ac02010/1623240/1624064/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73e69b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73e69b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa73010/1629920/1630208/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73e895 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73e895 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a8e2010/1636600/1638400/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73ea8e 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73ea8e 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abfd010/1643280/1644544/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73ec8a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73ec8a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa69010/1649960/1650688/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73ee81 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73ee81 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a8d4010/1656640/1656832/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73f079 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73f079 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abf8010/1663320/1665024/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73f274 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73f274 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa5f010/1670000/1671168/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73f46c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73f46c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a8c5010/1676680/1677312/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73f666 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73f666 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abf3010/1683360/1683456/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73f85d 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73f85e 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa55010/1690040/1691648/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73fa55 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73fa55 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a8b6010/1696720/1697792/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73fc50 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73fc50 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abee010/1703400/1703936/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c73fe4b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c73fe4b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa4c010/1710080/1710080/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c740049 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c740049 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abeb010/1716760/1718272/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c740243 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c740243 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa45010/1723440/1724416/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c74043b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c74043b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a89e010/1730120/1730560/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c740635 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c740635 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abe6010/1736800/1738752/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c74082f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c74082f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa3b010/1743480/1744896/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c740a27 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c740a27 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a88f010/1750160/1751040/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c740c22 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c740c23 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abe1010/1756840/1757184/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c740e1b 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c740e1b 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa31010/1763520/1765376/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c741014 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c741014 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a880010/1770200/1771520/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c74120e 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c74120e 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abdc010/1776880/1777664/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c741406 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c741406 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa28010/1783560/1783808/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c741600 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c741600 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a872010/1790240/1792000/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7417f8 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7417f8 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abd7010/1796920/1798144/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7419f1 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7419f1 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa1e010/1803600/1804288/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c741beb 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c741beb 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a863010/1810280/1810432/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c741de3 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c741de3 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abd2010/1816960/1818624/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c741fdd 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c741fdd 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa14010/1823640/1824768/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7421d7 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7421d7 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5a854010/1830320/1830912/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7423cf 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7423cf 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5abce010/1837000/1837056/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c742462 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c742462 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x7f8c5aa0b010/1843680/1845248/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c742462 3 sock.c:285:write_conn        4 7 snd 1843680/1845248 rcv 0/2048 n=110000 err=0
+1c74246d 3 sock.c:285:write_conn        4 7 snd 1733680/1845248 rcv 0/2048 n=248880 err=0
+1c742473 3 sock.c:285:write_conn        4 7 snd 1484800/1845248 rcv 0/2048 n=195000 err=0
+1c74251c 3 sock.c:285:write_conn        4 7 snd 1289800/1845248 rcv 0/2048 n=260000 err=0
+1c742541 3 sock.c:285:write_conn        4 7 snd 1029800/1845248 rcv 0/2048 n=260000 err=0
+1c742572 3 sock.c:285:write_conn        4 7 snd 769800/1845248 rcv 0/2048 n=260000 err=0
+1c742598 3 sock.c:285:write_conn        4 7 snd 509800/1845248 rcv 0/2048 n=260000 err=0
+1c7425bb 3 sock.c:285:write_conn        4 7 snd 249800/1845248 rcv 0/2048 n=249800 err=0
+1c7427b2 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7427b2 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7427b2 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c7429a7 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c7429a7 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c7429a7 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c742b9c 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c742b9c 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c742b9c 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c742d90 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c742d90 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c742d90 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c742f85 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c742f85 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c742f85 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c74317a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c74317a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c74317a 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c74336f 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c74336f 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c74336f 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c743564 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c743564 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c743564 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c743759 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c743759 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c743759 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c74394e 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c74394e 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c74394e 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c743b43 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c743b43 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c743b43 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c743d37 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c743d38 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c743d38 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c743f2d 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c743f2d 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c743f2d 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c744121 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c744121 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c744121 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c744316 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c744316 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c744316 3 sock.c:285:write_conn        4 7 snd 6680/8192 rcv 0/2048 n=6680 err=0
+1c74446a 3 mongoose_main.cpp:141:WebSoc WebSocketSend: 172.24.82.3:58955
+1c74446a 3 mongoose_main.cpp:148:WebSoc 0x555eb53b67e0 4 : txBuf 0x555eb53b7930/6680/8192/2048    rxBuf 0x555eb53b68c0/0/2048/2048
+1c74446a 3 sock.c:274:read_conn         4 7 snd 6680/8192 rcv 0/2048 n=8 err=0
+1c74446a 3 ws.c:200:mg_ws_cb            4 WS CLOSE
+1c74446a 3 sock.c:274:read_conn         4 7 snd 6684/8192 rcv 0/2048 n=-1 err=2
+1c74446a 3 sock.c:285:write_conn        4 7 snd 6684/8192 rcv 0/2048 n=6684 err=0
+1c74446a 2 mongoose_main.cpp:124:WebSoc WebSocketClose: 172.24.82.3:58955
+1c74446a 3 net.c:148:mg_close_conn      4 7 closed
+1c7450e0 3 sock.c:274:read_conn         3 6 snd 0/0 rcv 0/2048 n=-1 err=2
+1c7450e1 2 mongoose_main.cpp:124:WebSoc WebSocketClose:
+1c7450e1 3 net.c:148:mg_close_conn      3 6 closed
+1c7450e1 3 sock.c:274:read_conn         2 5 snd 0/2048 rcv 0/2048 n=-1 err=2
+1c7450e1 2 mongoose_main.cpp:124:WebSoc WebSocketClose:
+1c7450e1 3 net.c:148:mg_close_conn      2 5 closed
+^Cmake: *** [Makefile:22: run] Interrupt
+ ? apoindexter@acudev-main ? ~/git/mongoose_issue_debug ? ? main ± ?
