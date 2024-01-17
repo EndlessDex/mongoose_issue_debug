@@ -47,9 +47,9 @@ If the browser page is closed, the connection will be dropped and all used memor
 
 There are three real files:
 
-1. mongoose_main.cpp: source file for the webserver
-1. nonsense.h: a garbage string to send over the WebSocket
-1. index.html: basic webpage that will open a WebSocket and append all received message to `<body>`
+1. src/mongoose/mongoose_main.cpp: source file for the webserver
+1. src/mongoose/nonsense.h: a garbage string to send over the WebSocket
+1. src/httpd/index.html: basic webpage that will open a WebSocket and append all received message to `<body>`
 
 The other files are compilation related. If you have cmake, the example can be built by running `make mongoose` in the root directory of the repo. `make run` will start the mongoose server. `make all` will do both.
 
